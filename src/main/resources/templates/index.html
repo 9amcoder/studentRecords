@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Music Record - Steve Final Test</title>
+</head>
+<body>
+<div align="center">
+    <h1>Music List</h1>
+    <a href="/new">Create New Music</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+        <tr>
+            <th>Music Record Id</th>
+            <th>Title</th>
+            <th>Singer Name</th>
+            <th>Company</th>
+            <th>Made in</th>
+            <th>Language</th>
+            <th>Price</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="musicRecord : ${listMusics}">
+            <td th:text="${musicRecord.musicRecordId}">Music Record Id</td>
+            <td th:text="${musicRecord.musicRecordTitle}">Title</td>
+            <td th:text="${musicRecord.singerName}">Singer Name</td>
+            <td th:text="${musicRecord.companyReleased}">Company</td>
+            <td th:text="${musicRecord.c}">Made in</td>
+            <td th:text="${musicRecord.language}">Language</td>
+            <td th:text="${musicRecord.price}">Price</td>
+            <td>
+
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
